@@ -1,0 +1,29 @@
+it should have a feature to show monthly spending
+    if possible make a category wise  graph
+
+
+it should add stuff to category like i dont want flooded with stuff like
+chicken 65, chicken biryani n all, under say a non veg category all these get
+logged
+    that said it should save in detail within the category
+
+
+so each purchase will have:
+    category (ability to change from some feature) #must support multi category
+        like discord labels where say i click on drink label and it shows:
+            amount of drinks consumed (last month/week)
+            money spent on drinks category
+    cost of purchase
+    date and time of purchase (with ability to change)
+    a note about purchase 
+    
+
+
+i want stuff like coke n all in limit so a feature counting within a 
+category:
+    #therefore multi category system
+
+
+a category limit, say drink category limit has been reached
+    items that share drink category will get warning on next purchase
+
