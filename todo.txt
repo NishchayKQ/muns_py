@@ -27,3 +27,21 @@ category:
 a category limit, say drink category limit has been reached
     items that share drink category will get warning on next purchase
 
+
+need a shoping list feature aswell
+
+
+need it to have it export data in a good format, preferably excel
+
+
+track my bank balance by looking at spend logs
+
+
+need a way to add moeny aswell 
+
+
+matplotlib + tkinter support...
+    if possible make the visual representation by matplotlib on tkinter...
+    keep default way the program opens to be terminal(or gui) based on boot 
+    setting maybe importing matplotlib/tkinter inside error block so that on 
+    device that dont have em we can still run terminal
