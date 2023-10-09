@@ -8,7 +8,6 @@ with open("bankrupt.json") as munFile:
 
 # data format = {availavle balance,}
 
-
 def cmdGiven(runAmine=False):
     if runAmine:
         print(""" available commands :   \n
@@ -42,15 +41,28 @@ def cmdGiven(runAmine=False):
                     raise ValueError("No context provided, bad purchase!")
                 current_time = time.localtime()
                 uniqueID = time.strftime("%y%m%d%H%M%S", current_time)
+                # 2301021210
                 timeOfPurchase = time.strftime("%d %b %I:%M%p", current_time)
-                if (timeE := input("change time of purchase?")):
-                    pass
+
+                if (timeE := input("""change time of purchase?
+                                   format: <date><hrs><mins><am> \ <month><date>...
+                                   : """)):
+                    if len(timeE) % 2 != 0:
+                        raise ValueError(
+                            "Please enter 01 not 1 for dates and months")
+                    # 12 is length of timeOfPurchase
+                    temp = 12-len(timeE)
+                    timeOfPurchase = uniqueID[:temp] + timeE
+                    current_time = time.strptime(
+                        timeOfPurchase, "%y%m%d%I%M%p")
+
                 print(uniqueID)
                 print(timeOfPurchase)
+                print(current_time)
 
             except ValueError as err:
                 print(
-                    f"{err if str(err)[:15] != 'invalid literal' else 'Enter an integer !'}")
+                    f"{'Enter an integer !' if str(err)[:15] == 'invalid literal' else( 'invalid time format entered, ' + str(err) if str(err)[:9] == 'time data' else err) }")
 
             cmdGiven()
 
