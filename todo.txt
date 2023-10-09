@@ -45,3 +45,8 @@ matplotlib + tkinter support...
     keep default way the program opens to be terminal(or gui) based on boot 
     setting maybe importing matplotlib/tkinter inside error block so that on 
     device that dont have em we can still run terminal
+
+in 2, make option to choose from existing category or make a new category
+    like this 0 ,1 2,3...choose a number, if 0 then new category
+
+x       assign purchasedID to everyPurchase
